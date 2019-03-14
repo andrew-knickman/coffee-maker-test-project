@@ -5,13 +5,13 @@ package edu.towson.cis.cosc442.project4.coffeemaker;
  */
 public class CoffeeMaker {
 	/** Array of recipes in coffee maker */
-	private final Recipe [] recipeArray;
+	private Recipe [] recipeArray;
 	/** Number of recipes in coffee maker */
 	private final int NUM_RECIPES = 4;
 	/** Array describing if the array is full */
-	private final boolean [] recipeFull;
+	private boolean [] recipeFull;
 	/** Inventory of the coffee maker */
-    private final Inventory inventory;
+    private Inventory inventory;
 	
     /**
      * Constructor for the coffee maker
