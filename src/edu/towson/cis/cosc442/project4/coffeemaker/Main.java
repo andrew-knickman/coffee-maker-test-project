@@ -205,9 +205,10 @@ public class Main {
 	    	mainMenu();
 	    }
 	    
+	    //added dialogue for addInventory confirmation
         boolean inventoryAdded = coffeeMaker.addInventory(amtCoffee, amtMilk, amtSugar, amtChocolate);
-        if(inventoryAdded) System.out.println("Inventory added.");
-        else System.out.println("Inventory could not be added.");
+        if(inventoryAdded) System.out.println("Inventory items added." + System.getProperty("line.separator"));
+        else System.out.println("Inventory items could not be added." + System.getProperty("line.separator"));
         mainMenu();
     }
     
@@ -237,7 +238,12 @@ public class Main {
         Recipe recipe = recipes[recipeToPurchase];
         int change = coffeeMaker.makeCoffee(recipe, amountToPay);
         
-        System.out.println("Your change is: " + change + System.getProperty("line.separator"));
+        //added dialogue for purchase confirmation
+        System.out.println("Your change is: " + change);
+        if(change < amountToPay)
+        	System.out.println(recipeToPurchaseString + " purchased successfully."+ System.getProperty("line.separator"));
+        else if(change == amountToPay || change < recipe.getPrice())
+        	System.out.println(recipeToPurchaseString + " could not be purchased.");
         mainMenu();
     }
     
