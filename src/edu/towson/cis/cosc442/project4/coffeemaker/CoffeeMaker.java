@@ -80,7 +80,9 @@ public class CoffeeMaker {
         if(r != null) {
 	        for(int i = 0; i < NUM_RECIPES; i++) {
 	            if(r.equals(recipeArray[i])) {
-	                this.recipeArray[i] = recipeArray[i]; //Was redundant assignment, qualified with "this"
+	            	//was redundant assignment, qualified with "this"
+	            	//was assigning same value to recipe array index when value should be deleted
+	            	this.recipeArray[i] = new Recipe(); 
 	                canDeleteRecipe = true;
 	            }
 	        }
