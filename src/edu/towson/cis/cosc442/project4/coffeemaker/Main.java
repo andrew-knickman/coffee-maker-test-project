@@ -85,7 +85,7 @@ public class Main {
 		recipeAdded = coffeeMaker.addRecipe(r);
 	    
 	    if(recipeAdded) System.out.println(name + " successfully added.");
-	    else System.out.println(name + "could not be added.");
+	    else System.out.println(name + " could not be added.");
 	    
 	    mainMenu();
     }
@@ -171,7 +171,7 @@ public class Main {
         boolean recipeEdited = coffeeMaker.editRecipe(oldRecipe, newRecipe);
         
         if(recipeEdited) System.out.println(oldRecipe.getName() + " successfully edited.");
-	    else System.out.println(oldRecipe.getName() + "could not be edited.");
+	    else System.out.println(oldRecipe.getName() + " could not be edited.");
         
         mainMenu();
     }
@@ -205,7 +205,9 @@ public class Main {
 	    	mainMenu();
 	    }
 	    
-        coffeeMaker.addInventory(amtCoffee, amtMilk, amtSugar, amtChocolate);
+        boolean inventoryAdded = coffeeMaker.addInventory(amtCoffee, amtMilk, amtSugar, amtChocolate);
+        if(inventoryAdded) System.out.println("Inventory added.");
+        else System.out.println("Inventory could not be added.");
         mainMenu();
     }
     
