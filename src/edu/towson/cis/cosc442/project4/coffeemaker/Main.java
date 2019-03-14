@@ -104,7 +104,7 @@ public class Main {
         boolean recipeDeleted = coffeeMaker.deleteRecipe(recipes[recipeToDelete]);
         
         if(recipeDeleted) System.out.println(recipes[recipeToDelete].getName() + " successfully deleted.");
-	    else System.out.println(recipes[recipeToDelete].getName() + "could not be deleted.");
+	    else System.out.println(recipes[recipeToDelete].getName() + " could not be deleted.");
         
         mainMenu();
     }
@@ -181,6 +181,7 @@ public class Main {
 	    String coffeeString = inputOutput(System.getProperty("line.separator") + "Please enter the units of coffee to add: ");
 	    int amtCoffee = stringToInt(coffeeString);
 	    if(amtCoffee < 0) {
+	        System.out.println("Inventory items could not be added." + System.getProperty("line.separator"));
 	    	mainMenu();
 	    }
 	    
@@ -188,6 +189,7 @@ public class Main {
 	    String milkString = inputOutput(System.getProperty("line.separator") + "Please enter the units of milk to add: ");
 	    int amtMilk = stringToInt(milkString);
 	    if(amtMilk < 0) {
+	        System.out.println("Inventory items could not be added." + System.getProperty("line.separator"));
 	    	mainMenu();
 	    }
 	    
@@ -195,6 +197,7 @@ public class Main {
 	    String sugarString = inputOutput(System.getProperty("line.separator") + "Please enter the units of sugar to add: ");
 	    int amtSugar = stringToInt(sugarString);
 	    if(amtSugar < 0) {
+	        System.out.println("Inventory items could not be added." + System.getProperty("line.separator"));
 	    	mainMenu();
 	    }
 	    
@@ -202,13 +205,13 @@ public class Main {
 	    String chocolateString = inputOutput(System.getProperty("line.separator") + "Please enter the units of chocolate to add: ");
 	    int amtChocolate = stringToInt(chocolateString);
 	    if(amtChocolate < 0) {
+	        System.out.println("Inventory items could not be added." + System.getProperty("line.separator"));
 	    	mainMenu();
 	    }
 	    
 	    //added dialogue for addInventory confirmation
         boolean inventoryAdded = coffeeMaker.addInventory(amtCoffee, amtMilk, amtSugar, amtChocolate);
         if(inventoryAdded) System.out.println("Inventory items added." + System.getProperty("line.separator"));
-        else System.out.println("Inventory items could not be added." + System.getProperty("line.separator"));
         mainMenu();
     }
     
@@ -241,9 +244,9 @@ public class Main {
         //added dialogue for purchase confirmation
         System.out.println("Your change is: " + change);
         if(change < amountToPay)
-        	System.out.println(recipeToPurchaseString + " purchased successfully."+ System.getProperty("line.separator"));
+        	System.out.println(recipe.getName() + " purchased successfully." + System.getProperty("line.separator"));
         else if(change == amountToPay || change < recipe.getPrice())
-        	System.out.println(recipeToPurchaseString + " could not be purchased.");
+        	System.out.println(recipe.getName() + " could not be purchased." + System.getProperty("line.separator"));
         mainMenu();
     }
     
