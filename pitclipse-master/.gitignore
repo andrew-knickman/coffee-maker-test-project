@@ -1,0 +1,16 @@
+# Generic excludes
+*~
+*.lock
+*.DS_Store
+*.swp
+*.out
+# Java
+*.class
+# Maven
+target/
+# Eclipse
+.classpath
+.project
+.settings/
+bin/
+*.versionsBackup

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.pitest.pitclipse.ui.results">
+      <update
+            class="org.pitest.pitclipse.ui.swtbot.PitResultNotifier">
+      </update>
+   </extension>
+   <extension
+         point="org.pitest.pitclipse.core.executePit">
+      <pit_options
+            class="org.pitest.pitclipse.ui.swtbot.PitOptionsTestNotifier">
+      </pit_options>
+   </extension>
+</plugin>
