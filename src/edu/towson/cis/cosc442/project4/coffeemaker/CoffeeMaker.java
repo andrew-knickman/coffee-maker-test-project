@@ -102,7 +102,8 @@ public class CoffeeMaker {
         	if(recipeArray[i].getName() != null) {
 	            if(newRecipe.equals(recipeArray[i])) { 
 	            	recipeArray[i] = new Recipe();
-	            	if(addRecipe(newRecipe)) {
+	            	//changed to check if name of new recipe is same as old recipe
+	            	if(addRecipe(newRecipe) && newRecipe.getName().equals(oldRecipe.getName())) {
 	            		canEditRecipe = true;
 	            	} else {
 	            		canEditRecipe = false;

@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>RecipeTest.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">TestAll (2) (Mar 15, 2019 8:43:28 PM)</a> &gt; <a href="../../index.html" class="el_group">CoffeeMakerTest</a> &gt; <a href="../index.html" class="el_bundle">src</a> &gt; <a href="index.source.html" class="el_package">edu.towson.cis.cosc442.project4.coffeemaker</a> &gt; <span class="el_source">RecipeTest.java</span></div><h1>RecipeTest.java</h1><pre class="source lang-java linenums">package edu.towson.cis.cosc442.project4.coffeemaker;
+
+import org.junit.*;
+import static org.junit.Assert.*;
+
+/**
+ * The class &lt;code&gt;RecipeTest&lt;/code&gt; contains tests for the class &lt;code&gt;{@link Recipe}&lt;/code&gt;.
+ *
+ * @generatedBy CodePro at 3/14/19 6:58 PM
+ * @author Andrew Knickman
+ * @version $Revision: 1.0 $
+ */
+<span class="fc" id="L13">public class RecipeTest {</span>
+	
+	/**Test to compare  recipes with a name and one missing a name*/
+	@Test
+	public void testEqualsNoName() throws Exception{
+<span class="fc" id="L18">		Recipe r1 = new Recipe();</span>
+<span class="fc" id="L19">		Recipe r2 = new Recipe();</span>
+		
+<span class="fc" id="L21">		r1.setName(null);</span>
+<span class="fc" id="L22">		r2.setName(&quot;Coffee&quot;);</span>
+		
+<span class="fc" id="L24">		assertFalse(r1.equals(r2));</span>
+<span class="fc" id="L25">	}</span>
+	
+	/**Test to compare  recipes with a missing name and with a name*/
+	@Test
+	public void testEqualsNameMatch() throws Exception{
+<span class="fc" id="L30">		Recipe r1 = new Recipe();</span>
+<span class="fc" id="L31">		Recipe r2 = new Recipe();</span>
+		
+<span class="fc" id="L33">		r1.setName(&quot;Coffee&quot;);</span>
+<span class="fc" id="L34">		r2.setName(&quot;Coffee&quot;);</span>
+		
+<span class="fc" id="L36">		assertTrue(r1.equals(r2));</span>
+<span class="fc" id="L37">	}</span>
+	
+	/**
+	 * Run the boolean equals(Recipe) method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/14/19 6:58 PM
+	 */
+	@Test
+	public void testEquals_1()
+		throws Exception {
+<span class="fc" id="L49">		Recipe fixture = new Recipe();</span>
+<span class="fc" id="L50">		fixture.setName((String) null);</span>
+<span class="fc" id="L51">		Recipe r = new Recipe();</span>
+
+<span class="fc" id="L53">		boolean result = fixture.equals(r);</span>
+
+		// add additional test code here
+<span class="fc" id="L56">		assertEquals(false, result);</span>
+<span class="fc" id="L57">	}</span>
+
+	/**
+	 * Run the boolean equals(Recipe) method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/14/19 6:58 PM
+	 */
+	@Test
+	public void testEquals_2()
+		throws Exception {
+<span class="fc" id="L69">		Recipe fixture = new Recipe();</span>
+<span class="fc" id="L70">		fixture.setName(&quot;&quot;);</span>
+<span class="fc" id="L71">		Recipe r = new Recipe();</span>
+
+<span class="fc" id="L73">		boolean result = fixture.equals(r);</span>
+
+		// add additional test code here
+<span class="fc" id="L76">		assertEquals(false, result);</span>
+<span class="fc" id="L77">	}</span>
+
+	/**
+	 * Run the boolean equals(Recipe) method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/14/19 6:58 PM
+	 */
+	@Test
+	public void testEquals_3()
+		throws Exception {
+<span class="fc" id="L89">		Recipe fixture = new Recipe();</span>
+<span class="fc" id="L90">		fixture.setName(&quot;&quot;);</span>
+<span class="fc" id="L91">		Recipe r = new Recipe();</span>
+
+<span class="fc" id="L93">		boolean result = fixture.equals(r);</span>
+
+		// add additional test code here
+<span class="fc" id="L96">		assertEquals(false, result);</span>
+<span class="fc" id="L97">	}</span>
+
+	/**
+	 * Run the int getAmtChocolate() method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/14/19 6:58 PM
+	 */
+	@Test
+	public void testGetAmtChocolate_1()
+		throws Exception {
+<span class="fc" id="L109">		Recipe fixture = new Recipe();</span>
+<span class="fc" id="L110">		fixture.setName(&quot;&quot;);</span>
+
+<span class="fc" id="L112">		int result = fixture.getAmtChocolate();</span>
+
+		// add additional test code here
+<span class="fc" id="L115">		assertEquals(0, result);</span>
+<span class="fc" id="L116">	}</span>
+
+	/**
+	 * Run the int getAmtCoffee() method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/14/19 6:58 PM
+	 */
+	@Test
+	public void testGetAmtCoffee_1()
+		throws Exception {
+<span class="fc" id="L128">		Recipe fixture = new Recipe();</span>
+<span class="fc" id="L129">		fixture.setName(&quot;&quot;);</span>
+
+<span class="fc" id="L131">		int result = fixture.getAmtCoffee();</span>
+
+		// add additional test code here
+<span class="fc" id="L134">		assertEquals(0, result);</span>
+<span class="fc" id="L135">	}</span>
+
+	/**
+	 * Run the int getAmtMilk() method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/14/19 6:58 PM
+	 */
+	@Test
+	public void testGetAmtMilk_1()
+		throws Exception {
+<span class="fc" id="L147">		Recipe fixture = new Recipe();</span>
+<span class="fc" id="L148">		fixture.setName(&quot;&quot;);</span>
+
+<span class="fc" id="L150">		int result = fixture.getAmtMilk();</span>
+
+		// add additional test code here
+<span class="fc" id="L153">		assertEquals(0, result);</span>
+<span class="fc" id="L154">	}</span>
+
+	/**
+	 * Run the int getAmtSugar() method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/14/19 6:58 PM
+	 */
+	@Test
+	public void testGetAmtSugar_1()
+		throws Exception {
+<span class="fc" id="L166">		Recipe fixture = new Recipe();</span>
+<span class="fc" id="L167">		fixture.setName(&quot;&quot;);</span>
+
+<span class="fc" id="L169">		int result = fixture.getAmtSugar();</span>
+
+		// add additional test code here
+<span class="fc" id="L172">		assertEquals(0, result);</span>
+<span class="fc" id="L173">	}</span>
+
+	/**
+	 * Run the String getName() method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/14/19 6:58 PM
+	 */
+	@Test
+	public void testGetName_1()
+		throws Exception {
+<span class="fc" id="L185">		Recipe fixture = new Recipe();</span>
+<span class="fc" id="L186">		fixture.setName(&quot;&quot;);</span>
+
+<span class="fc" id="L188">		String result = fixture.getName();</span>
+
+		// add additional test code here
+<span class="fc" id="L191">		assertEquals(&quot;&quot;, result);</span>
+<span class="fc" id="L192">	}</span>
+
+	/**
+	 * Run the int getPrice() method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/14/19 6:58 PM
+	 */
+	@Test
+	public void testGetPrice_1()
+		throws Exception {
+<span class="fc" id="L204">		Recipe fixture = new Recipe();</span>
+<span class="fc" id="L205">		fixture.setName(&quot;&quot;);</span>
+
+<span class="fc" id="L207">		int result = fixture.getPrice();</span>
+
+		// add additional test code here
+<span class="fc" id="L210">		assertEquals(0, result);</span>
+<span class="fc" id="L211">	}</span>
+
+	/**
+	 * Run the void setAmtChocolate(int) method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/14/19 6:58 PM
+	 */
+	@Test
+	public void testSetAmtChocolate_1()
+		throws Exception {
+<span class="fc" id="L223">		Recipe fixture = new Recipe();</span>
+<span class="fc" id="L224">		fixture.setName(&quot;&quot;);</span>
+<span class="fc" id="L225">		int amtChocolate = -1;</span>
+
+<span class="fc" id="L227">		fixture.setAmtChocolate(amtChocolate);</span>
+
+		// add additional test code here
+<span class="fc" id="L230">	}</span>
+
+	/**
+	 * Run the void setAmtChocolate(int) method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/14/19 6:58 PM
+	 */
+	@Test
+	public void testSetAmtChocolate_2()
+		throws Exception {
+<span class="fc" id="L242">		Recipe fixture = new Recipe();</span>
+<span class="fc" id="L243">		fixture.setName(&quot;&quot;);</span>
+<span class="fc" id="L244">		int amtChocolate = 1;</span>
+
+<span class="fc" id="L246">		fixture.setAmtChocolate(amtChocolate);</span>
+
+		// add additional test code here
+<span class="fc" id="L249">	}</span>
+
+	/**
+	 * Run the void setAmtCoffee(int) method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/14/19 6:58 PM
+	 */
+	@Test
+	public void testSetAmtCoffee_1()
+		throws Exception {
+<span class="fc" id="L261">		Recipe fixture = new Recipe();</span>
+<span class="fc" id="L262">		fixture.setName(&quot;&quot;);</span>
+<span class="fc" id="L263">		int amtCoffee = -1;</span>
+
+<span class="fc" id="L265">		fixture.setAmtCoffee(amtCoffee);</span>
+
+		// add additional test code here
+<span class="fc" id="L268">	}</span>
+
+	/**
+	 * Run the void setAmtCoffee(int) method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/14/19 6:58 PM
+	 */
+	@Test
+	public void testSetAmtCoffee_2()
+		throws Exception {
+<span class="fc" id="L280">		Recipe fixture = new Recipe();</span>
+<span class="fc" id="L281">		fixture.setName(&quot;&quot;);</span>
+<span class="fc" id="L282">		int amtCoffee = 1;</span>
+
+<span class="fc" id="L284">		fixture.setAmtCoffee(amtCoffee);</span>
+
+		// add additional test code here
+<span class="fc" id="L287">	}</span>
+
+	/**
+	 * Run the void setAmtMilk(int) method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/14/19 6:58 PM
+	 */
+	@Test
+	public void testSetAmtMilk_1()
+		throws Exception {
+<span class="fc" id="L299">		Recipe fixture = new Recipe();</span>
+<span class="fc" id="L300">		fixture.setName(&quot;&quot;);</span>
+<span class="fc" id="L301">		int amtMilk = -1;</span>
+
+<span class="fc" id="L303">		fixture.setAmtMilk(amtMilk);</span>
+
+		// add additional test code here
+<span class="fc" id="L306">	}</span>
+
+	/**
+	 * Run the void setAmtMilk(int) method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/14/19 6:58 PM
+	 */
+	@Test
+	public void testSetAmtMilk_2()
+		throws Exception {
+<span class="fc" id="L318">		Recipe fixture = new Recipe();</span>
+<span class="fc" id="L319">		fixture.setName(&quot;&quot;);</span>
+<span class="fc" id="L320">		int amtMilk = 1;</span>
+
+<span class="fc" id="L322">		fixture.setAmtMilk(amtMilk);</span>
+
+		// add additional test code here
+<span class="fc" id="L325">	}</span>
+
+	/**
+	 * Run the void setAmtSugar(int) method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/14/19 6:58 PM
+	 */
+	@Test
+	public void testSetAmtSugar_1()
+		throws Exception {
+<span class="fc" id="L337">		Recipe fixture = new Recipe();</span>
+<span class="fc" id="L338">		fixture.setName(&quot;&quot;);</span>
+<span class="fc" id="L339">		int amtSugar = -1;</span>
+
+<span class="fc" id="L341">		fixture.setAmtSugar(amtSugar);</span>
+
+		// add additional test code here
+<span class="fc" id="L344">	}</span>
+
+	/**
+	 * Run the void setAmtSugar(int) method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/14/19 6:58 PM
+	 */
+	@Test
+	public void testSetAmtSugar_2()
+		throws Exception {
+<span class="fc" id="L356">		Recipe fixture = new Recipe();</span>
+<span class="fc" id="L357">		fixture.setName(&quot;&quot;);</span>
+<span class="fc" id="L358">		int amtSugar = 1;</span>
+
+<span class="fc" id="L360">		fixture.setAmtSugar(amtSugar);</span>
+
+		// add additional test code here
+<span class="fc" id="L363">	}</span>
+
+	/**
+	 * Run the void setName(String) method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/14/19 6:58 PM
+	 */
+	@Test
+	public void testSetName_1()
+		throws Exception {
+<span class="fc" id="L375">		Recipe fixture = new Recipe();</span>
+<span class="fc" id="L376">		fixture.setName(&quot;&quot;);</span>
+<span class="fc" id="L377">		String name = &quot;&quot;;</span>
+
+<span class="fc" id="L379">		fixture.setName(name);</span>
+
+		// add additional test code here
+<span class="fc" id="L382">	}</span>
+
+	/**
+	 * Run the void setPrice(int) method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/14/19 6:58 PM
+	 */
+	@Test
+	public void testSetPrice_1()
+		throws Exception {
+<span class="fc" id="L394">		Recipe fixture = new Recipe();</span>
+<span class="fc" id="L395">		fixture.setName(&quot;&quot;);</span>
+<span class="fc" id="L396">		int price = -1;</span>
+
+<span class="fc" id="L398">		fixture.setPrice(price);</span>
+
+		// add additional test code here
+<span class="fc" id="L401">	}</span>
+
+	/**
+	 * Run the void setPrice(int) method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/14/19 6:58 PM
+	 */
+	@Test
+	public void testSetPrice_2()
+		throws Exception {
+<span class="fc" id="L413">		Recipe fixture = new Recipe();</span>
+<span class="fc" id="L414">		fixture.setName(&quot;&quot;);</span>
+<span class="fc" id="L415">		int price = 1;</span>
+
+<span class="fc" id="L417">		fixture.setPrice(price);</span>
+
+		// add additional test code here
+<span class="fc" id="L420">	}</span>
+
+	/**
+	 * Run the String toString() method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/14/19 6:58 PM
+	 */
+	@Test
+	public void testToString_1()
+		throws Exception {
+<span class="fc" id="L432">		Recipe fixture = new Recipe();</span>
+<span class="fc" id="L433">		fixture.setName(&quot;&quot;);</span>
+
+<span class="fc" id="L435">		String result = fixture.toString();</span>
+
+		// add additional test code here
+<span class="fc" id="L438">		assertEquals(&quot;&quot;, result);</span>
+<span class="fc" id="L439">	}</span>
+
+	/**
+	 * Perform pre-test initialization.
+	 *
+	 * @throws Exception
+	 *         if the initialization fails for some reason
+	 *
+	 * @generatedBy CodePro at 3/14/19 6:58 PM
+	 */
+	@Before
+	public void setUp()
+		throws Exception {
+		// add additional set up code here
+<span class="fc" id="L453">	}</span>
+
+	/**
+	 * Perform post-test clean-up.
+	 *
+	 * @throws Exception
+	 *         if the clean-up fails for some reason
+	 *
+	 * @generatedBy CodePro at 3/14/19 6:58 PM
+	 */
+	@After
+	public void tearDown()
+		throws Exception {
+		// Add additional tear down code here
+<span class="fc" id="L467">	}</span>
+
+	/**
+	 * Launch the test.
+	 *
+	 * @param args the command line arguments
+	 *
+	 * @generatedBy CodePro at 3/14/19 6:58 PM
+	 */
+	public static void main(String[] args) {
+<span class="nc" id="L477">		new org.junit.runner.JUnitCore().run(RecipeTest.class);</span>
+<span class="nc" id="L478">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span>TestAll (2) (Mar 15, 2019 8:43:28 PM)</div></body></html>

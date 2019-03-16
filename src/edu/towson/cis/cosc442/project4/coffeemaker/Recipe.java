@@ -127,6 +127,7 @@ public class Recipe {
      * @param r Recipe
      * @return boolean
      */
+    //refactored if-else statements
     public boolean equals(Recipe r) {
         if(r.getName() == null) {
 	    	return false;
